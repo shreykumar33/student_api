@@ -204,7 +204,7 @@ fealtyx-api/
 ### Create a New Student
 1. Send a POST request to `/api/students/` with the student's details:
    ```bash
-   curl -X POST http://127.0.0.1:8000/api/students/    -H "Content-Type: application/json"    -d '{"name": "Alice", "age": 23, "email": "alice@example.com", "number": "9876543210"}'
+   curl -X POST http:/localhost/api/students/    -H "Content-Type: application/json"    -d '{"name": "Alice", "age": 23, "email": "alice@example.com", "number": "9876543210"}'
    ```
 
 2. The server will respond with:
