@@ -127,11 +127,11 @@ def generate_summary(students):
 
 
 @api_view(['GET'])
-def student_summary_view(request):
-    student_data = request.data
+def student_summary_view(request, id):
+    student = students.get(id)
 
-    if students is None:
-        return Response({'error': 'Failed to fetch student data'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    if student is None:
+        return Response({'error': 'Not found!'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-    summary = generate_summary(students)
+    summary = generate_summary(student)
     return Response({'summary': summary}, status=status.HTTP_200_OK)

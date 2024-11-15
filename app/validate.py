@@ -20,7 +20,11 @@ def validate_data(student_data, is_put = False, students= None, student_id= None
 
     if number:
         if any(student['number'] == number and (student_id != student['id'] if student_id else True) for student in students.values()):
-            errors.append(f"Number '{number}' is already taken!")
+            errors.append(f"Number '{number}' already exists!")
+
+    if email:
+            if any(student['email'] == email and (student_id != student['id'] if student_id else True) for student in students.values()):
+                errors.append(f"Email ID '{email}' already exists!")
 
     if name is not None:
         if not isinstance(name, str) or len(name.strip()) == 0:
