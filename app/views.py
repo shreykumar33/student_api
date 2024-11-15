@@ -111,6 +111,8 @@ class StudentsbyIdAPI(APIView):
         except Exception as e:
            return Response({'error': str(e)})
         
+
+        
 def generate_summary(students):
     message = {
         "role": "user", 
