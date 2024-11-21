@@ -1,7 +1,7 @@
 
-# FealtyX API
+# Simple REST API
 
-The FealtyX API is a RESTful application designed to manage student records, including functionalities to create, read, update, and delete student data. The API includes robust validation mechanisms to ensure data integrity and provides endpoints to retrieve summaries of student information.
+This is a RESTful application designed to manage student records, including functionalities to create, read, update, and delete student data. The API includes robust validation mechanisms to ensure data integrity and provides endpoints to retrieve summaries of student information.
 
 ## Features
 - **CRUD Operations**:
